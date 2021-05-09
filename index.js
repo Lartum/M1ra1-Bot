@@ -1,5 +1,7 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
+const fetch = require('node-fetch')
+const keepAlive = require('./app')
 
 
 client.on('ready', () => {
@@ -12,4 +14,5 @@ client.on('message', msg => {
   }
 })
 
+keepAlive()
 client.login(process.env.TOKEN)
